@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-function Registry () {
+function Details () {
     return (
         <div>
             <Navbar />
-            <h1>Registry</h1>
+            <h1>Details</h1>
         </div>
     )
 }
 
-export default Registry; 
+export default Details; 
