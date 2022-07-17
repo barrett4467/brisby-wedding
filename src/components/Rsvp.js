@@ -15,7 +15,6 @@ function RSVP () {
             <h1>Chief Hosa Lodge</h1>
             <h3>Golden, Colorado</h3>
             <h3>October 15th, 2022</h3>
-            <Countdown />
             <p>Please respond by September 17th</p>
             <button onClick={() => setButtonPopup(true)}>Respond here</button>
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
