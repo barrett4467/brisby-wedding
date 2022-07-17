@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar"; 
 import About from "./components/Home";
 import Photos from "./components/Photos";
 import Registry from "./components/Registry";
 import RSVP from "./components/Rsvp";
 import Details from "./components/Details";
+
 
 function App() {
   return (
