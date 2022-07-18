@@ -4,8 +4,6 @@ import Photos from "./components/Photos";
 import Registry from "./components/Registry";
 import RSVP from "./components/Rsvp";
 import Details from "./components/Details";
-import styled from "styled-components";
-import img from "./images/engagement3.jpg";
 
 function App() {
   return (
