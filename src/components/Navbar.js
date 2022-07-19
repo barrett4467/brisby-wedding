@@ -9,8 +9,9 @@ const Nav = styled.div `
 const StyledLink = styled(Link)`
     text-decoration: none;
     padding: 2px;
-    color: #1e1c29;
+    color: #0a0a0a;
     font-size: 20px;
+    // hover: #f2ce92;
 `
 
 

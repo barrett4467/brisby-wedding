@@ -1,29 +1,38 @@
 import React from "react";
 import Navbar from "./Navbar";
 import styled from "styled-components";
-import img from "../images/engagement3.jpg";
+import img from "../images/engagement5.jpg";
+import "../index.css";
 
 const Main = styled.div`
-    color: #1e1c29;
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(${img});
+    color: #black;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(${img});
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    // background-attachment: fixed;
     background-position: 50% 50%;
     margin: -10px;
     }
-    background
 `
+
 const Content = styled.div`
-    // text-align: right;
+    // padding: 10px;
     position: relative;
-    top: 300px;
-    padding: 10px;
+    top: 20px;
+    margin-left: 40px;
+    color: #3b0512;
+    font-family: 'Homemade Apple', cursive;
 `
 const Names = styled.h1`
     text-align: left;
+    letter-spacing: 5px;
     width: 40px;
+`
+const Greeting = styled.h1`
+    left: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    transition: roate90;
 `
 
 function About () {
@@ -31,8 +40,8 @@ function About () {
         <Main>
             <Navbar />
                 <Content>
-                    <Names>Rebecca Barrett & Dylan Brisby</Names>
-                    <h3>We can't wait to share our special day with you</h3>
+                    <Names>Becca & Dylan</Names>
+                    <Greeting>We can't wait to share our special day with you!</Greeting>
                 </Content>
         </Main>
     )
