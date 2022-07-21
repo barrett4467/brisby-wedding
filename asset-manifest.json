@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/brisby-wedding/static/css/main.69f8564c.css",
-    "main.js": "/brisby-wedding/static/js/main.5fbaa3bf.js",
-    "static/media/engagement5.jpg": "/brisby-wedding/static/media/engagement5.ba073a30e5d2a2ac7f83.jpg",
-    "index.html": "/brisby-wedding/index.html",
-    "main.69f8564c.css.map": "/brisby-wedding/static/css/main.69f8564c.css.map",
-    "main.5fbaa3bf.js.map": "/brisby-wedding/static/js/main.5fbaa3bf.js.map"
+    "main.css": "/static/css/main.69f8564c.css",
+    "main.js": "/static/js/main.ae15ac99.js",
+    "static/media/engagement5.jpg": "/static/media/engagement5.ba073a30e5d2a2ac7f83.jpg",
+    "index.html": "/index.html",
+    "main.69f8564c.css.map": "/static/css/main.69f8564c.css.map",
+    "main.ae15ac99.js.map": "/static/js/main.ae15ac99.js.map"
   },
   "entrypoints": [
     "static/css/main.69f8564c.css",
-    "static/js/main.5fbaa3bf.js"
+    "static/js/main.ae15ac99.js"
   ]
 }
