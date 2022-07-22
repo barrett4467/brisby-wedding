@@ -15,14 +15,21 @@ const GlobalStyle = createGlobalStyle`
     }
 
 `
-const Content = styled.div`
+const ContentWrapper = styled.div`
     background-color: rgba(217, 216, 212, 0.6); 
     margin: 0 auto;
     margin-top: 60px;
     padding: 1%;
     width: 95%;
-    text-align: left;
     border-radius: 15px;
+    text-align: center;
+`
+const Content = styled.div`
+    margin: 0 auto;
+    // text-align: left;
+`
+const H1 = styled.h1`
+    letter-spacing: 3px;
 `
 
 function RSVP () {
@@ -32,18 +39,20 @@ function RSVP () {
         <div>
             <GlobalStyle />
             <Navbar />
-            <Content>
-                <h1>Chief Hosa Lodge</h1>
-                <h3>Golden, Colorado</h3>
-                <h3>October 15th, 2022</h3>
-                <p>Please respond by September 17th</p>
-                <button onClick={() => setButtonPopup(true)}>Respond here</button>
-                <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
-                    <RSVPform />
-                </Popup>
+            <ContentWrapper>
+                <Content>
+                    <H1>CHIEF HOSA LODGE</H1>
+                    <h3>Golden, Colorado</h3>
+                    <h3>October 15th, 2022</h3>
+                    <p>Please respond by September 17th</p>
+                    <button onClick={() => setButtonPopup(true)}>Respond here</button>
+                    <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
+                        <RSVPform />
+                    </Popup>
 
-                <Link to="/details">view details</Link>
-            </Content>
+                    <Link to="/details">view details</Link>
+                </Content>
+            </ContentWrapper>
         </div>
     )
 }
