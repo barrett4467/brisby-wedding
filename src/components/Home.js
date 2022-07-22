@@ -40,11 +40,12 @@ const Greeting = styled.div`
     letter-spacing: 2px;
 `
 const RSVP = styled.button`
-    background-color: white ;
+    background-color: #faf9f6;
     color: #3b0512;
     border: 1px solid #3b0512;
     border-radius: 5px; 
-    width: 5em;
+    width: 6em;
+    padding: 1%;
 
 `
 

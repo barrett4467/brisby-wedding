@@ -6,6 +6,7 @@ import Registry from "./components/Registry";
 import RSVP from "./components/Rsvp";
 import Details from "./components/Details";
 
+
 const App = () => {
   // changes the tab title
   useEffect(() => {

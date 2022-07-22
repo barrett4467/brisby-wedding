@@ -26,8 +26,8 @@ function Navbar() {
             <Nav>
                 <StyledLink to="/">Home</StyledLink>
                 <StyledLink to="/brisby-wedding/details">Details</StyledLink>
-                <StyledLink to="/brisby-wedding/registry">Registry</StyledLink>
                 <StyledLink to="/brisby-wedding/rsvp">RSVP</StyledLink>
+                <StyledLink to="/brisby-wedding/registry">Registry</StyledLink>
                 <StyledLink to="/brisby-wedding/photos">Photos</StyledLink>
             </Nav>
         )
