@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/Home";
 import Photos from "./components/Photos";
@@ -5,15 +6,19 @@ import Registry from "./components/Registry";
 import RSVP from "./components/Rsvp";
 import Details from "./components/Details";
 
-function App() {
+const App = () => {
+  // changes the tab title
+  useEffect(() => {
+    document.title = "Becca & Dylan"
+  }, [])
   return (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/photos" element={<Photos />} />
-          <Route path="/details" element={<Details />} />
-          <Route path="/registry" element={<Registry />} />
-          <Route path="/rsvp" element={<RSVP />} />
+          <Route path="/brisby-wedding/photos" element={<Photos />} />
+          <Route path="/brisby-wedding/details" element={<Details />} />
+          <Route path="/brisby-wedding/registry" element={<Registry />} />
+          <Route path="/brisby-wedding/rsvp" element={<RSVP />} />
       
         </Routes>
       </BrowserRouter>

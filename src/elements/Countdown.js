@@ -1,8 +1,10 @@
 import React from 'react';
-import DateCountdown from "react-date-countdown-timer";
+// import DateCountdown from "react-date-countdown-timer";
 
 function Countdown() {
-    return <DateCountdown dateTo='October 15, 2022 10:00:00 GMT+03:00'  />;
+    return <>
+    <h1>Countdown</h1>
+    </>
 }
 
 export default Countdown;

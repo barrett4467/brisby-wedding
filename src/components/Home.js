@@ -1,19 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import styled from "styled-components";
-import img from "../images/engagement5.jpg";
+import img from "../images/engagement7.jpg";
 import "../index.css";
 
 const Main = styled.div`
-    color: #black;
-    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(${img});
-    width: 100vw;
-    height: 100vh;
+    background:  url(${img});
     background-size: cover;
     background-position: 50% 50%;
+    width: 100vw;
+    height: 100vh;
     margin: -10px;
     }
 `
+// linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ),
 
 const Content = styled.div`
     // padding: 10px;
@@ -21,27 +22,45 @@ const Content = styled.div`
     top: 20px;
     margin-left: 40px;
     color: #3b0512;
-    font-family: 'Homemade Apple', cursive;
+    // color: white;
 `
 const Names = styled.h1`
+    position: relative;
+    top: 50px;
     text-align: left;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     width: 40px;
 `
-const Greeting = styled.h1`
-    left: 25px;
+const Greeting = styled.div`
+    position: relative;
+    top: 164px;
+    right: 28px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    transition: roate90;
+    letter-spacing: 2px;
+`
+const RSVP = styled.button`
+    background-color: white ;
+    color: #3b0512;
+    border: 1px solid #3b0512;
+    border-radius: 5px; 
+    width: 5em;
+
 `
 
-function About () {
+const About = (props) => {
+    const navigate = useNavigate();
+
     return (
         <Main>
             <Navbar />
                 <Content>
-                    <Names>Becca & Dylan</Names>
-                    <Greeting>We can't wait to share our special day with you!</Greeting>
+                    <Names>BECCA & DYLAN</Names>
+                    <Greeting>
+                        <h3> are getting married</h3>
+                        <h4> October 15th, 2022 | 4pm </h4>
+                        <RSVP onClick={()=> navigate("/brisby-wedding/rsvp")}>RSVP</RSVP>
+                    </Greeting>
                 </Content>
         </Main>
     )

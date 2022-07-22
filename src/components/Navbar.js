@@ -7,10 +7,16 @@ const Nav = styled.div `
     width: 75px;
 `
 const StyledLink = styled(Link)`
+    position: relative;
+    top: 10px;
+    left: 20px;
     text-decoration: none;
     padding: 2px;
-    color: #0a0a0a;
+    color: #3b0512;
     font-size: 20px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
     // hover: #f2ce92;
 `
 
@@ -19,10 +25,10 @@ function Navbar() {
         return (
             <Nav>
                 <StyledLink to="/">Home</StyledLink>
-                <StyledLink to="/details">Details</StyledLink>
-                <StyledLink to="/registry">Registry</StyledLink>
-                <StyledLink to="/rsvp">RSVP</StyledLink>
-                <StyledLink to="/photos">Photos</StyledLink>
+                <StyledLink to="/brisby-wedding/details">Details</StyledLink>
+                <StyledLink to="/brisby-wedding/registry">Registry</StyledLink>
+                <StyledLink to="/brisby-wedding/rsvp">RSVP</StyledLink>
+                <StyledLink to="/brisby-wedding/photos">Photos</StyledLink>
             </Nav>
         )
 }
