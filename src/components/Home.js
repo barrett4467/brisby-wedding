@@ -47,6 +47,10 @@ const RSVP = styled.button`
     width: 6em;
     padding: 1%;
 
+    &:hover {
+        background-color: #d4d3d2;
+    }
+
 `
 
 const About = (props) => {

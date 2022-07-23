@@ -1,5 +1,10 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import styled from 'styled-components';
+
+const Label = styled.label`
+  margin: 10px;
+`
 function RSVPForm() {
   const [state, handleSubmit] = useForm("meqnblnr");
   if (state.succeeded) {
@@ -7,9 +12,9 @@ function RSVPForm() {
   }
   return (
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">
+        <Label htmlFor="email">
             Email Address
-        </label>
+        </Label>
         <input
             id="email"
             type="email" 
@@ -20,17 +25,17 @@ function RSVPForm() {
         field="email"
         errors={state.errors}
       />
-        <label htmlFor="first-name">
+        <Label htmlFor="first-name">
            First Name
-        </label>
+        </Label>
         <input
             id="first-name"
             type="text" 
             name="first-name"
         />
-        <label htmlFor="last-name">
+        <Label htmlFor="last-name">
            Last Name
-        </label>
+        </Label>
         <input
             id="last-name"
             type="text" 
@@ -41,22 +46,22 @@ function RSVPForm() {
         field="name"
         errors={state.errors}
       />
-        <label for="attending">Will you be Attending?</label>
+        <Label for="attending">Will you be Attending?</Label>
         <select name="attending" id="attending" required="">
             <option value="" selected="" disabled="">Select</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
         </select>
-        <label for="plus">And with how many guests?</label>
+        <Label for="plus">And with how many guests?</Label>
         <select name="plus" id="plus" required="">
             <option value="0" selected="">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
         </select>
-        <label htmlFor="plus-names">
+        <Label htmlFor="plus-names">
           Please let us know who!
-        </label>
+        </Label>
         <input
             id="plus-names"
             type="text" 
@@ -64,12 +69,12 @@ function RSVPForm() {
         />
         <ValidationError 
             prefix="Plus-names" 
-            field="plus-names"
+            field="plus-names" 
             errors={state.errors}
         />
-        <label htmlFor='message'>
+        <Label htmlFor='message'>
             Any dietary restrictions or things we should know?
-        </label>
+        </Label>
       <textarea
         id="message"
         name="message"

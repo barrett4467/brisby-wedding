@@ -39,7 +39,6 @@ const ImageContainer = styled.div`
     float: left;
 `
 const PhotoCards = styled.div`
-    // padding: 1%;
     width: 30%;
     border-radius: 10px;
     float: left;

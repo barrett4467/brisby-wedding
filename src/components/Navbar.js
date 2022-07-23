@@ -17,7 +17,9 @@ const StyledLink = styled(Link)`
     letter-spacing: 2px;
     margin-left: 10px;
     margin-right: 10px;
-    // hover: #f2ce92;
+    &:hover {
+        color: #dfac7a;
+    }
 `
 
 
