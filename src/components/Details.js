@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import Photo from "../images/engagement4.jpg";
+import breakpoints from "../elements/breakpoints";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -13,10 +14,14 @@ const GlobalStyle = createGlobalStyle`
 
 `
 const Photo1 = styled.img`
+@media only screen and ${breakpoints.device.xs}{
+    display: none;
+}
     position: relative;
     top: 20px;
     width: 50%;
     margin: 3%;
+
 `
 const Content = styled.div`
     text-align: left;
