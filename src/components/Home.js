@@ -13,18 +13,17 @@ const Main = styled.div`
         position: relative;
         text-align: center;
     }
-    @media only screen and ${breakpoints.device.sm}{
-    }
     @media only screen and ${breakpoints.device.lg}{
         background: url(${img});
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
 
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         margin: -10;
     }
+    
 `
 
 const Content = styled.div`
@@ -43,6 +42,15 @@ const Content = styled.div`
             width: 100%;
             margin-top: 14%;
         }
+        @media only screen and ${breakpoints.device.sm}{
+            margin-top: 4%;
+        }
+        @media only screen and ${breakpoints.device.lg}{
+            font-size: 3em;
+            text-align: left;
+            margin-top: 10%;
+        
+        }
     `
     const Img = styled.img`
         @media only screen and ${breakpoints.device.xs}{
@@ -56,6 +64,14 @@ const Content = styled.div`
             margin-top: 28%;
             border: 1px solid #3b0512;
         }
+        @media only screen and ${breakpoints.device.sm}{
+            margin-top: 11%;
+        }
+        @media only screen and ${breakpoints.device.lg}{
+            // width: 60%;
+            display: none;
+        }
+
 `
 const Greeting = styled.div`
     @media only screen and ${breakpoints.device.xs}{
@@ -64,21 +80,29 @@ const Greeting = styled.div`
         text-align: center;
         font-weight: bold;
     }
+
 `
 const H3 = styled.h3`
     @media only screen and ${breakpoints.device.xs}{
         display: none;
     }
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    letter-spacing: 2px;
+    @media only screen and ${breakpoints.device.lg}{
+        display: inline-block;
+        position: relative;
+        margin-bottom: 5%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        letter-spacing: 5px;
+    }
 `
 const Date = styled.h4`
+@media only screen and ${breakpoints.device.xs}{
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 1%;
+}
 `
 const RSVP = styled.button`
     background-color: #faf9f6;
@@ -107,7 +131,7 @@ const About = (props) => {
                     <Greeting>
                         <H3> are getting married</H3>
                         <Date> October 15th, 2022  4pm </Date>
-                        <RSVP onClick={()=> navigate("/brisby-wedding/rsvp")}>RSVP</RSVP>
+                        <RSVP onClick={()=> navigate("/brisby-wedding/rsvp")}> Click to RSVP</RSVP>
                     </Greeting>
                 </Content>
         </Main>

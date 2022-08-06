@@ -7,18 +7,12 @@ import { slide as Menu } from "react-burger-menu";
 
 const LittleNav =styled.div`
 @media only screen and ${breakpoints.device.xs}{
-
+    // display: none;
     }
-@media only screen and ${breakpoints.device.sm}{
-    display: none;
-}
 `
 const BigNav = styled.div `
     @media only screen and ${breakpoints.device.xs}{
         display: none;
-    }
-    @media only screen and ${breakpoints.device.sm}{
-        display: inline-block;;
     }
 `
 const StyledLink = styled(Link)`
@@ -41,17 +35,16 @@ const StyledLink = styled(Link)`
 function Navbar() {
         return (
             <div>
-            <LittleNav >
-                    <Hamburger/>
-            </LittleNav>
-            <BigNav>
-                <StyledLink to="/">Home</StyledLink>
-                <StyledLink to="/brisby-wedding/details">Details</StyledLink>
-                <StyledLink to="/brisby-wedding/rsvp">RSVP</StyledLink>
-                <StyledLink to="/brisby-wedding/registry">Registry</StyledLink>
-                <StyledLink to="/brisby-wedding/photos">Photos</StyledLink>
-            </BigNav>
-        
+                <LittleNav >
+                        <Hamburger/>
+                </LittleNav>
+                <BigNav>
+                    <StyledLink to="/">Home</StyledLink>
+                    <StyledLink to="/brisby-wedding/details">Details</StyledLink>
+                    <StyledLink to="/brisby-wedding/rsvp">RSVP</StyledLink>
+                    <StyledLink to="/brisby-wedding/registry">Registry</StyledLink>
+                    <StyledLink to="/brisby-wedding/photos">Photos</StyledLink>
+                </BigNav>
             </div>
         )
 }

@@ -6,6 +6,13 @@
     left: 20px;
     top: 10px;
   }
+
+  @media screen and (min-width: 1200px) {
+    .bm-burger-button{
+      width: 40px;
+      height: 40px
+    }
+  }
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
@@ -22,12 +29,19 @@
     height: 24px;
     width: 24px;
   }
+
   
   /* Color/shape of close button cross */
   .bm-cross {
     background: #bdc3c7;
   }
   
+  @media screen and (min-width: 1200px) {
+    .bm-cross-button{
+      width: 40px;
+      height: 40px
+    }
+  }
   /*
   Sidebar wrapper styles
   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
