@@ -6,6 +6,7 @@ import breakpoints from "../elements/breakpoints";
 import img from "../images/engagement7.jpg";
 import "../index.css";
 
+
 const Main = styled.div`
 
     @media only screen and ${breakpoints.device.xs}{
@@ -36,28 +37,30 @@ const Content = styled.div`
     const Names = styled.h1`
         @media only screen and ${breakpoints.device.xs}{
             position: absolute;
-            top: 20px;
-            text-align: left;
-            letter-spacing: 10px;
-            width: 40px;
+            text-align: center;
+            letter-spacing: 6px;
+            font-size: 26px;
+            width: 100%;
+            margin-top: 14%;
         }
     `
-    const Img = styled.div`
+    const Img = styled.img`
         @media only screen and ${breakpoints.device.xs}{
-            background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(${img});
+            background-image: url(${img});
             background-size: cover;
             background-position: 50% 50%;
             background-repeat: no-repeat;
             width: 87%;
-            height: 385px;
+            height: 318px;
             margin: 10px;
-            margin-top: 35px;
+            margin-top: 28%;
+            border: 1px solid #3b0512;
         }
 `
 const Greeting = styled.div`
     @media only screen and ${breakpoints.device.xs}{
-        position: absolute;
-        bottom: 10px;
+        position: relative;
+        top: -10px;
         text-align: center;
         font-weight: bold;
     }
@@ -75,6 +78,7 @@ const Date = styled.h4`
     font-size: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin: 1%;
 `
 const RSVP = styled.button`
     background-color: #faf9f6;
@@ -83,6 +87,7 @@ const RSVP = styled.button`
     border-radius: 5px; 
     width: 6em;
     padding: 1%;
+    margin: 1%;
 
     &:hover {
         background-color: #d4d3d2;

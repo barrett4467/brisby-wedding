@@ -2,13 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components"; 
 import breakpoints from "../elements/breakpoints";
-
+import Hamburger from "../elements/Hamburger";
 import { slide as Menu } from "react-burger-menu";
 
-const Nav = styled.div `
+const LittleNav =styled.div`
+@media only screen and ${breakpoints.device.xs}{
+
+    }
+@media only screen and ${breakpoints.device.sm}{
+    display: none;
+}
+`
+const BigNav = styled.div `
     @media only screen and ${breakpoints.device.xs}{
-        height: 3%;
-        width: 100vw;
+        display: none;
+    }
+    @media only screen and ${breakpoints.device.sm}{
+        display: inline-block;;
     }
 `
 const StyledLink = styled(Link)`
@@ -30,13 +40,19 @@ const StyledLink = styled(Link)`
 
 function Navbar() {
         return (
-            <Nav>
+            <div>
+            <LittleNav >
+                    <Hamburger/>
+            </LittleNav>
+            <BigNav>
                 <StyledLink to="/">Home</StyledLink>
                 <StyledLink to="/brisby-wedding/details">Details</StyledLink>
                 <StyledLink to="/brisby-wedding/rsvp">RSVP</StyledLink>
                 <StyledLink to="/brisby-wedding/registry">Registry</StyledLink>
                 <StyledLink to="/brisby-wedding/photos">Photos</StyledLink>
-            </Nav>
+            </BigNav>
+        
+            </div>
         )
 }
 
