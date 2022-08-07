@@ -1,13 +1,30 @@
-const express = require("express");
-const app = express();
-const path = require("path");
+import path from "path";
+import fs from "fs";
+import React from "react";
+import ReactDOMServer from "react-dom/server";
+import express from "express";
+import App from "../src/App";
+
 const PORT = process.env.PORT || 3000;
 
+app.get("/", (req, res) => {
+    const app = ReactDOMServer.renderToString(<App />);
+    const indexFile = path.resolve("./build/index.html");
 
-app.use(express.static(path.join(__dirname, "build")));
+    fs.readFile(indexFile, "utf8", (err, data) => {
+        if (err) {
+            console.error("Something went wrong: ", err);
+            return res.status(500).send("Better luck next time!");
+        };
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, build, "index.html"));
-})
+        return res.send(
+            data.replace('div id="root"></div>,'`<div id="root>${app}</div>`)
+        );
+    });
+});
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+app.use(express.static("./build"));
+
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`)
+});
