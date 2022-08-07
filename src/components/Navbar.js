@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components"; 
 import breakpoints from "../elements/breakpoints";
 import Hamburger from "../elements/Hamburger";
-import { slide as Menu } from "react-burger-menu";
 
 const LittleNav =styled.div`
 @media only screen and ${breakpoints.device.sm}{

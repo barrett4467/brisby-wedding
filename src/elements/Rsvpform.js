@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import styled from 'styled-components';
-import breakpoints from './breakpoints';
 
 const Title = styled.h1`
   letter-spacing: 10px;

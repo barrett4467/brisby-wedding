@@ -1,7 +1,7 @@
 {
   "name": "wedding-website",
   "version": "0.1.0",
-  "homepage": "https://barrett4467.github.io/brisby-wedding/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@formspree/react": "^2.3.0",

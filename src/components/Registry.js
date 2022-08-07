@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
