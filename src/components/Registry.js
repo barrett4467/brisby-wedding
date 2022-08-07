@@ -14,26 +14,32 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 const Main = styled.div`
-    text-align: center;
+    
 `
 const Img = styled.img`
-    @media only screen and ${breakpoints.device.xs}{
-        background-image: url(${img});
-        background-size: cover;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        width: 87%;
-        height: 318px;
-        margin: 10px;
-        margin-top: 28%;
-    }
+@media only screen and ${breakpoints.device.xs}{
+    display: none;
+}
+@media only screen and ${breakpoints.device.sm}{
+    display: inline-block;
+    background-image: url(${img});
+    background-size: cover;
+    margin-top: 6%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 75%;
+    height: 318px;
+}
+@media only screen and ${breakpoints.device.lg}{
+    height: 350px;
+    width: 75%;
+}
+
 `
 const Content = styled.div`
-    background-color: rgba(217, 216, 212, 0.6); 
     text-align: center;
     margin: 0 auto;
     margin-top: 60px;
-    padding: 1%;
     width: 95%;
 `
 const RegistryBTN = styled.button`

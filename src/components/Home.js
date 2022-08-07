@@ -70,6 +70,7 @@ const Content = styled.div`
             height: 350px;
             width: 75%;
             margin-top: 6%;
+            background-position: 75% 30%;
         }
 
 `

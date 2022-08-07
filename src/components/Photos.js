@@ -25,6 +25,7 @@ import photo22 from "../images/engagement23.jpg";
 
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import breakpoints from "../elements/breakpoints";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -34,15 +35,24 @@ const GlobalStyle = createGlobalStyle`
 
 `
 const ImageContainer = styled.div`
-    margin: 0 auto;
+    margin-left: 15%;
     text-align: center;
-    float: left;
+    float: left;'
 `
 const PhotoCards = styled.div`
-    width: 30%;
-    border-radius: 10px;
-    float: left;
-    margin: 5px;
+    @media only screen and ${breakpoints.device.xs}{
+        width: 100%;
+    }
+    @media only screen and ${breakpoints.device.sm}{
+        width: 48%;
+        border-radius: 10px;
+        float: left;
+        margin: 0 auto;
+        padding: 2px;  
+    }
+    @media only screen and ${breakpoints.device.xl}{
+        with: 32%;
+    }
 `
 const Photo = styled.img`
     width: 100%;
