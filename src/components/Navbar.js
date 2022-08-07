@@ -6,14 +6,18 @@ import Hamburger from "../elements/Hamburger";
 import { slide as Menu } from "react-burger-menu";
 
 const LittleNav =styled.div`
-@media only screen and ${breakpoints.device.xs}{
-    // display: none;
+@media only screen and ${breakpoints.device.sm}{
+    display: none;
     }
 `
 const BigNav = styled.div `
     @media only screen and ${breakpoints.device.xs}{
         display: none;
     }
+    @media screen and ${breakpoints.device.sm}{
+        display: inline-block;
+    }
+
 `
 const StyledLink = styled(Link)`
     position: relative;
@@ -22,7 +26,7 @@ const StyledLink = styled(Link)`
     text-decoration: none;
     padding: 2px;
     color: #3b0512;
-    font-size: 20px;
+    font-size: 30px;
     letter-spacing: 2px;
     margin-left: 10px;
     margin-right: 10px;

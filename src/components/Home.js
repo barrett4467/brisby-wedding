@@ -14,14 +14,7 @@ const Main = styled.div`
         text-align: center;
     }
     @media only screen and ${breakpoints.device.lg}{
-        background: url(${img});
-        background-size: cover;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
 
-        width: 100vw;
-        height: 100vh;
-        margin: -10;
     }
     
 `
@@ -43,13 +36,16 @@ const Content = styled.div`
             margin-top: 14%;
         }
         @media only screen and ${breakpoints.device.sm}{
-            margin-top: 4%;
+            margin-top: 5%;
+            letter-spacing: 10px;
         }
         @media only screen and ${breakpoints.device.lg}{
             font-size: 3em;
-            text-align: left;
-            margin-top: 10%;
+            margin-top: 3%;
         
+        }
+        @media only screen and ${breakpoints.device.lg}{
+            margin-top: 2%;
         }
     `
     const Img = styled.img`
@@ -62,14 +58,18 @@ const Content = styled.div`
             height: 318px;
             margin: 10px;
             margin-top: 28%;
-            border: 1px solid #3b0512;
         }
         @media only screen and ${breakpoints.device.sm}{
-            margin-top: 11%;
+            margin-top: 12%;
         }
         @media only screen and ${breakpoints.device.lg}{
-            // width: 60%;
-            display: none;
+            height: 450px;
+            margin-top: 10%;
+        }
+        @media only screen and ${breakpoints.device.xl}{
+            height: 350px;
+            width: 75%;
+            margin-top: 6%;
         }
 
 `
@@ -79,6 +79,11 @@ const Greeting = styled.div`
         top: -10px;
         text-align: center;
         font-weight: bold;
+    }
+    @media only screen and ${breakpoints.device.lg}{
+        display: inline-block;
+        top: -35px;
+        margin-bottom: 0;
     }
 
 `

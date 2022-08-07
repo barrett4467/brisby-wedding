@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Popup from "./Popup";
 import { useState } from "react";
-import Countdown from "../elements/Countdown";
+import breakpoints from "../elements/breakpoints";
 import RSVPform from "../elements/Rsvpform";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
@@ -23,6 +23,10 @@ const ContentWrapper = styled.div`
     width: 95%;
     border-radius: 15px;
     text-align: center;
+
+    @media only screen and ${breakpoints.device.xl}{
+        width: 60%
+    }
 `
 const Content = styled.div`
     margin: 0 auto;
@@ -47,7 +51,7 @@ const Details = styled(Link)`
     text-decoration: none;
     color: #3b0512;
     &:hover {
-        color: #dfac7a;
+        color: #dc9d3c;
     }
 `
 

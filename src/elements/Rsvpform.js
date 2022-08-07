@@ -1,17 +1,20 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import styled from 'styled-components';
+import breakpoints from './breakpoints';
 
 const Title = styled.h1`
   letter-spacing: 10px;
 `
 const FieldWrapper = styled.div`
   display: block;
-  margin-top: 10px;
+  margin: 10px;
   text-align: left;
+  width: 75%;
 `
 const Label = styled.label`
- margin: 10px;
+ margin-bottom: 10px;
+ margin: 1%;
 `
 const Input = styled.input`
   margin: 10px;
@@ -30,9 +33,12 @@ const Submit = styled.button`
   color: #3b0512;
   border: 1px solid #3b0512;
   border-radius: 5px; 
-  width: 6em;
-  padding: 1%;
+  width: 7em;
+  text-align: center;
+  padding: 2%;
   letter-spacing: 3px;
+  margin: 0 auto;
+  margin-top: 5%;
 
   &:hover {
       background-color: #d4d3d2;
@@ -45,7 +51,7 @@ function RSVPForm() {
   }
   return (
       <form onSubmit={handleSubmit}>
-        <Title>LETS PARTY!</Title>
+        <Title>LET'S PARTY!</Title>
         <FieldWrapper>
           <Label htmlFor="name">
             Name:
