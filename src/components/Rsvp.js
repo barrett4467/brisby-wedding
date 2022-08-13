@@ -23,7 +23,7 @@ const ContentWrapper = styled.div`
     width: 95%;
     border-radius: 15px;
     text-align: center;
-
+    overflow-y: scroll;
     @media only screen and ${breakpoints.device.xl}{
         width: 60%
     }
