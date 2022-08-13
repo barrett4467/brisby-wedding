@@ -20,6 +20,7 @@
     background-color: #faf9f6;
     border-radius: 10px;
     width: 75%;
+    overflow-y: scroll; 
 }
 .popup-inner .close-btn {
     position: absolute;
